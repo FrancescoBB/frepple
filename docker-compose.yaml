@@ -13,7 +13,7 @@ services:
     volumes:
       - log-apache-community:/var/log/apache2
       - log-frepple-community:/var/log/frepple
-      - config-frepple-community:/etc/frepple
+      #- config-frepple-community:/etc/frepple
     environment:
       POSTGRES_HOST: frepple-community-postgres
       POSTGRES_PORT: 5432
@@ -23,6 +23,8 @@ services:
   frepple-community-postgres:
     image: "postgres:13"
     container_name: frepple-community-postgres
+    ports:
+      - 5433:5432
     networks:
       - backend
     environment:

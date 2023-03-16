@@ -548,12 +548,12 @@ THEMES = [
     "earth",
     "grass",
     "lemon",
-    "odoo",
-    "openbravo",
-    "orange",
-    "snow",
-    "strawberry",
-    "water",
+    # "odoo",
+    # "openbravo",
+    # "orange",
+    # "snow",
+    # "strawberry",
+    # "water",
 ]
 
 # A default user-group to which new users are automatically added

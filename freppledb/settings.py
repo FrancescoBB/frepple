@@ -376,13 +376,13 @@ CSV_CHARSET = "utf-8"  # locale.getdefaultlocale()[1]
 THEMES = [
     "earth",
     "grass",
-    "lemon",
-    "odoo",
-    "openbravo",
-    "orange",
-    "snow",
-    "strawberry",
-    "water",
+    # "lemon",
+    # "odoo",
+    # "openbravo",
+    # "orange",
+    # "snow",
+    # "strawberry",
+    # "water",
 ]
 
 # A list of user names thatcan generate database dumps and download them.
