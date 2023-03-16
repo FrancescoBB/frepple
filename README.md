@@ -2,6 +2,29 @@
 
 # frePPLe
 
+## BlackBytes
+
+To build:
+
+```sh
+docker build -f contrib/docker/ubuntu-20-04.dockerfile -t prova-frepple .
+```
+
+To launch:
+
+```sh
+# start
+docker-compose up -d
+
+# stop
+docker-compose down
+```
+
+
+
+
+------------------------------------
+
 ## Open source supply chain planning
 
 FrePPLe is an easy-to-use and easy-to-implement open source **advanced planning and scheduling** tool for manufacturing companies.

@@ -1,0 +1,39 @@
+services:
+
+  frepple:
+    # image: ghcr.io/frepple/frepple-community:latest
+    image: "prova-frepple"
+    container_name: frepple-community-webserver
+    ports:
+      - 9000:80
+    depends_on:
+      - frepple-community-postgres
+    networks:
+      - backend
+    volumes:
+      - log-apache-community:/var/log/apache2
+      - log-frepple-community:/var/log/frepple
+      - config-frepple-community:/etc/frepple
+    environment:
+      POSTGRES_HOST: frepple-community-postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: frepple
+      POSTGRES_PASSWORD: frepple
+
+  frepple-community-postgres:
+    image: "postgres:13"
+    container_name: frepple-community-postgres
+    networks:
+      - backend
+    environment:
+      POSTGRES_PASSWORD: frepple
+      POSTGRES_DB: frepple
+      POSTGRES_USER: frepple
+
+volumes:
+  log-apache-community:
+  log-frepple-community:
+  config-frepple-community:
+
+networks:
+  backend:

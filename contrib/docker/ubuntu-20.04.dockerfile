@@ -32,12 +32,13 @@ RUN apt-get -y -q update && \
 
 # An alternative to the copy is to clone from git:
 # RUN git clone https://github.com/frepple/frepple.git frepple
-COPY frepple-*.tar.gz ./
+# COPY frepple-*.tar.gz ./
+COPY . frepple
 
-RUN src=`basename --suffix=.tar.gz frepple-*` && \
-  tar -xzf *.tar.gz && \
-  rm *.tar.gz && \
-  cd $src && \
+  #src=`basename --suffix=.tar.gz frepple-*` && \
+  #tar -xzf *.tar.gz && \
+  #rm *.tar.gz && \
+RUN cd ./frepple && \
   python3 -m pip install --upgrade pip && \
   python3 -m pip install -r requirements.dev.txt && \
   cmake -B /build -DCMAKE_BUILD_TYPE=Release && \
@@ -80,5 +81,5 @@ EXPOSE 80
 
 VOLUME ["/var/log/frepple", "/etc/frepple", "/var/log/apache2", "/etc/apache2"]
 
-COPY entrypoint.sh /
+COPY ./contrib/docker/entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
