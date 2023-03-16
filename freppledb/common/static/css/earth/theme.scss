@@ -1,9 +1,9 @@
-$light: #D6A979;
+$light: #3d67bc;
 $dark: $light;
 
-$primary: darken(#3E8CA8, 8%);
-$secondary: lighten($light, 5%);
-$success: #508513;
+$primary: #3d67bc;
+$secondary: #3d67bc;
+$success: #8bc34a;
 $info: #03a9f4;
 $warning: #ffeb3b;
 $danger: #ff5252;
@@ -90,3 +90,14 @@ $nav-link-color: $body-color;
 $nav-tabs-border-color: $light;
 $nav-tabs-border-radius: 0;
 $spacer: 1rem;
+
+// Extra settings for the odoo theme
+$accordion-button-active-color: white;
+$accordion-button-color: white;
+$navbar-light-color: white;
+$navbar-light-hover-color: white;
+
+#nav-breadcrumb-header {
+    background-color: $body-bg;
+    padding-top: 8px
+}

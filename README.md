@@ -7,7 +7,7 @@
 To build:
 
 ```sh
-docker build -f contrib/docker/ubuntu-20-04.dockerfile -t prova-frepple .
+docker build -f contrib/docker/ubuntu-20.04.dockerfile -t prova-frepple .
 ```
 
 To launch:
@@ -18,6 +18,12 @@ docker-compose up -d
 
 # stop
 docker-compose down
+```
+
+To compile theme
+
+```sh 
+npx grunt sass
 ```
 
 

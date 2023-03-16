@@ -100,8 +100,20 @@
     }
 }
 
+.card {
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+.card-title {
+    font-weight: bold;
+}
+
 .card-header {
-    background: $secondary;
+    background: $white;
+    border-bottom: none;
+    padding-top: 16px;
+
 }
 
 .red {
