@@ -21,7 +21,7 @@ $gray-900: #212529 !default;
 $black: #000 !default;
 
 // Body background
-$body-bg: #F0F0F0;
+$body-bg: #f1f1f9;
 
 // Logo height
 $navbar-brand-height: 3rem;
@@ -96,8 +96,27 @@ $accordion-button-active-color: white;
 $accordion-button-color: white;
 $navbar-light-color: white;
 $navbar-light-hover-color: white;
+$breadcrumb-color: $gray-500;
+$breadcrumb-divider-color: $gray-500;
 
 #nav-breadcrumb-header {
-    background-color: $body-bg;
-    padding-top: 8px
+    background-color: $body-bg !important;
+    padding-top: 8px !important;
+}
+
+#nav-menu-header {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 2;
+}
+
+.btn {
+    border-radius: 500px !important;
+}
+
+.breadcrumb-item a {
+    color: $gray-500 !important;
+}
+
+.ui-jqgrid-hdiv {
+    background-color: $white !important;
 }

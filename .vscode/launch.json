@@ -12,6 +12,12 @@
             "console": "integratedTerminal",
             "args": [
                 "runserver"
+            ],
+            "environment": [
+                {
+                    "name": "POSTGRES_HOST",
+                    "value": "192.168.178.123"
+                },
             ]
         },
         {

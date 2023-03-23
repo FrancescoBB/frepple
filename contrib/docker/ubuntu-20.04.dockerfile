@@ -65,10 +65,10 @@ RUN apt-get -y -q update && \
 
 COPY --from=builder /build/*.deb .
 
-RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install --no-install-recommends -f -y -q ./*.deb && \
-  apt-get -y purge --autoremove && \
-  apt-get clean && \
-  rm -rf *.deb /var/lib/apt/lists/* /etc/apt/sources.list.d/pgdg.list
+RUN apt-get -y -q update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install --no-install-recommends -f -y -q ./*.deb 
+RUN apt-get -y purge --autoremove
+RUN apt-get clean
+RUN rm -rf *.deb /var/lib/apt/lists/* /etc/apt/sources.list.d/pgdg.list
 
 EXPOSE 80
 
